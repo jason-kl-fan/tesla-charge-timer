@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="特斯拉充電完成時間倒數工具，快速計算從現在到預計充電完成還剩多久。" />
+  <title>特斯拉充電倒數計時器</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero-card">
+      <div class="badge">Tesla Charging ETA</div>
+      <h1>特斯拉充電倒數計時器</h1>
+      <p class="subtitle">輸入預計完成時間，立即算出從現在到充電完成還剩多久。</p>
+
+      <div class="time-grid">
+        <div class="info-card">
+          <span class="label">現在時間</span>
+          <strong id="currentTime">--:--:--</strong>
+          <small id="currentDate">----/--/--</small>
+        </div>
+        <div class="info-card accent">
+          <span class="label">預計完成</span>
+          <strong id="targetPreview">尚未設定</strong>
+          <small id="targetDayText">請先選擇時間</small>
+        </div>
+      </div>
+
+      <div class="control-panel">
+        <label for="targetTime">預計完成時間</label>
+        <div class="input-row">
+          <input type="time" id="targetTime" step="60" />
+          <button id="calculateBtn">開始計算</button>
+        </div>
+        <div class="quick-actions">
+          <button class="chip" data-add-minutes="30">+30 分鐘</button>
+          <button class="chip" data-add-minutes="60">+1 小時</button>
+          <button class="chip" data-add-minutes="90">+1.5 小時</button>
+          <button class="chip" data-add-minutes="120">+2 小時</button>
+        </div>
+      </div>
+
+      <section class="countdown-panel">
+        <div class="countdown-main">
+          <span class="label">剩餘時間</span>
+          <div class="countdown-number" id="countdownText">-- 小時 -- 分鐘</div>
+          <p class="countdown-hint" id="statusText">請輸入預計完成時間開始計算</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-box">
+            <span>總分鐘數</span>
+            <strong id="totalMinutes">--</strong>
+          </div>
+          <div class="stat-box">
+            <span>完成時間點</span>
+            <strong id="finishAt">--:--</strong>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
