@@ -130,6 +130,8 @@ h1 {
 
 input[type="time"] {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   padding: 16px;
   border: 0;
   border-radius: 16px;
@@ -204,15 +206,38 @@ button {
 }
 
 @media (max-width: 640px) {
+  .app-shell {
+    padding: 14px;
+  }
+
   .hero-card {
-    padding: 20px;
+    width: 100%;
+    padding: 16px;
     border-radius: 24px;
+  }
+
+  .control-panel,
+  .countdown-panel,
+  .info-card,
+  .stat-box {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
   .time-grid,
   .stats-grid,
   .input-row {
     grid-template-columns: 1fr;
+  }
+
+  .input-row {
+    width: 100%;
+  }
+
+  .input-row > * {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   #calculateBtn {
