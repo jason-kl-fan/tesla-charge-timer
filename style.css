@@ -128,14 +128,26 @@ h1 {
   gap: 12px;
 }
 
+.time-input-wrap {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+}
+
 input[type="time"] {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
   width: 100%;
   max-width: 100%;
   min-width: 0;
   padding: 16px;
   border: 0;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.96);
+  background: transparent;
   color: #111827;
   font-size: 1rem;
   font-weight: 700;
@@ -232,12 +244,24 @@ button {
 
   .input-row {
     width: 100%;
+    overflow: hidden;
   }
 
   .input-row > * {
     width: 100%;
     max-width: 100%;
     min-width: 0;
+  }
+
+  .time-input-wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  input[type="time"] {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
   }
 
   #calculateBtn {
