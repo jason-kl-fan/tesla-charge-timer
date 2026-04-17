@@ -113,5 +113,13 @@ chips.forEach((chip) => {
   });
 });
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch((error) => {
+      console.error('Service worker 註冊失敗:', error);
+    });
+  });
+}
+
 updateClock();
 setInterval(updateClock, 1000);
