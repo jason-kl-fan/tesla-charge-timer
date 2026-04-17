@@ -1,0 +1,23 @@
+{
+  "name": "tesla-charge-timer",
+  "version": "1.0.0",
+  "description": "一個簡單漂亮的特斯拉充電倒數網頁。",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jason-kl-fan/tesla-charge-timer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jason-kl-fan/tesla-charge-timer/issues"
+  },
+  "homepage": "https://github.com/jason-kl-fan/tesla-charge-timer#readme",
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}
